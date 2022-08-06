@@ -10,8 +10,8 @@ const Main = ({ children }: Props) => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Share U</title>
-        <meta name="description" content="ShareU HomePage" />
+        <title>Nep Lofi</title>
+        <meta name="description" content="Nep Lofi HomePage" />
         <meta name="author" content="Swikar Adhikari" />
         <meta name="author" content="swikarr_" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -21,7 +21,7 @@ const Main = ({ children }: Props) => {
         <meta property="og:type" content="website" />
       </Head>
 
-      <div className="mx-auto">{children}</div>
+      <div className="grid place-items-center h-screen">{children}</div>
     </>
   );
 };
