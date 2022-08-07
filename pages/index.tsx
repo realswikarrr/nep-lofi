@@ -5,7 +5,7 @@ import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
 
 const Home: NextPage = ({ playing, setPlaying, currentVideo }: any) => {
   return (
-    <div className="p-5 mt-44 mx-auto max-w-xs mb-10 lg:max-w-2xl items-center justify-center rounded-xl flex ring ">
+    <div className="p-5 mt-44 mx-auto max-w-xs mb-10 lg:max-w-2xl items-center justify-center rounded-xl flex  ">
       <div className="flex items-center flex-col">
         <div className="flex flex-col items-center gap-1">
           <div className="border rounded-full flex h-40 w-40">
