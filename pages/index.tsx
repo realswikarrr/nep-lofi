@@ -1,9 +1,28 @@
 import type { NextPage } from "next";
+import { useState } from "react";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import Player from "../components/player";
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ id, playing, setPlaying }: any) => {
   return (
-    <div className="mainbg h-[90%] w-[90%] rounded-xl overflow-hidden shadow-2xl bg-cover bg-center border-2 border-[#674AB3] shadow-5xl"></div>
+    <div>
+      <button onClick={() => setPlaying(!playing)}>
+        {playing ? "Pause" : "Play"}{" "}
+      </button>
+
+      <Link href="/chat">chat</Link>
+    </div>
   );
 };
 
-export default Home;
+export default dynamic(() => Promise.resolve(Home), { ssr: false });
+
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       results: results.items,
+//     },
+//     revalidate: 10,
+//   };
+// }

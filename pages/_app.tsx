@@ -1,11 +1,34 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Layout from "../components/layout/main";
+import { useState, useEffect } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [currentVideo, setCurrentVideo] = useState<any>();
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    const MY_PLAYLIST = process.env.NEXT_PUBLIC_YOUTUBE_PLAYLIST_ID;
+    const YOUTUBE_API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
+    const REQUEST_URL = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${MY_PLAYLIST}&key=${YOUTUBE_API_KEY}`;
+
+    const fetchData = async () => {
+      const response = await fetch(REQUEST_URL);
+      const results = await response.json();
+      setCurrentVideo(results.items[0]);
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <Layout>
-      <Component {...pageProps} />
+    <Layout id={currentVideo?.snippet.resourceId.videoId} playing={playing}>
+      <Component
+        {...pageProps}
+        id={currentVideo?.snippet.resourceId.videoId}
+        playing={playing}
+        setPlaying={setPlaying}
+      />
     </Layout>
   );
 }

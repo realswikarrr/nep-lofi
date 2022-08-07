@@ -1,11 +1,15 @@
 import Head from "next/head";
 import React, { ReactNode } from "react";
+import Player from "../player";
+import dynamic from "next/dynamic";
 
 type Props = {
   children: ReactNode;
+  id: string;
+  playing: boolean;
 };
 
-const Main = ({ children }: Props) => {
+const Main = ({ children, id, playing }: Props) => {
   return (
     <>
       <Head>
@@ -21,9 +25,15 @@ const Main = ({ children }: Props) => {
         <meta property="og:type" content="website" />
       </Head>
 
-      <div className="grid place-items-center h-screen">{children}</div>
+      <Player id={id} playing={playing} />
+
+      <div className="grid place-items-center h-screen">
+        <div className="mainbg h-[90%] w-[90%] rounded-xl overflow-hidden shadow-2xl bg-cover bg-center border-2 border-[#674AB3] shadow-5xl">
+          {children}
+        </div>
+      </div>
     </>
   );
 };
 
-export default Main;
+export default dynamic(() => Promise.resolve(Main), { ssr: false });
