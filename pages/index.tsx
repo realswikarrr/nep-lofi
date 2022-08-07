@@ -11,19 +11,19 @@ const Home: NextPage = ({ playing, setPlaying, currentVideo }: any) => {
           <div className="border rounded-full flex h-40 w-40">
             {playing ? (
               <Image
-                src={currentVideo?.snippet.thumbnails.maxres.url}
+                src={currentVideo?.snippet.thumbnails.medium.url}
                 alt={currentVideo?.snippet.title}
                 width={200}
                 height={200}
-                className="object-cover animate-spin-slow rounded-full"
+                className="animate-spin-slow rounded-full object-cover"
               />
             ) : (
               <Image
-                src={currentVideo?.snippet.thumbnails.maxres.url}
+                src={currentVideo?.snippet.thumbnails.medium.url}
                 alt={currentVideo?.snippet.title}
                 width={200}
                 height={200}
-                className="object-cover rounded-full"
+                className="rounded-full object-cover"
               />
             )}
           </div>

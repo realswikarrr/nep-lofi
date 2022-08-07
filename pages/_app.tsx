@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const MY_PLAYLIST = process.env.NEXT_PUBLIC_YOUTUBE_PLAYLIST_ID;
     const YOUTUBE_API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
-    const REQUEST_URL = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${MY_PLAYLIST}&key=${YOUTUBE_API_KEY}`;
+    const REQUEST_URL = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${MY_PLAYLIST}&key=${YOUTUBE_API_KEY}&maxResults=10`;
 
     const fetchData = async () => {
       const response = await fetch(REQUEST_URL);
