@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 function MyApp({ Component, pageProps }: AppProps) {
   const [currentVideo, setCurrentVideo] = useState<any>();
   const [playing, setPlaying] = useState(false);
+  const [results, setResults] = useState<any>();
 
   useEffect(() => {
     const MY_PLAYLIST = process.env.NEXT_PUBLIC_YOUTUBE_PLAYLIST_ID;
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     const fetchData = async () => {
       const response = await fetch(REQUEST_URL);
       const results = await response.json();
+      setResults(results.items);
       setCurrentVideo(results.items[0]);
     };
 
@@ -27,7 +29,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         {...pageProps}
         id={currentVideo?.snippet.resourceId.videoId}
         playing={playing}
+        results={results}
         setPlaying={setPlaying}
+        setCurrentVideo={setCurrentVideo}
       />
     </Layout>
   );

@@ -11,7 +11,9 @@ const Home: NextPage = ({ id, playing, setPlaying }: any) => {
         {playing ? "Pause" : "Play"}{" "}
       </button>
 
-      <Link href="/chat">chat</Link>
+      <Link className="text-white" href="/track">
+        Tracks
+      </Link>
     </div>
   );
 };
