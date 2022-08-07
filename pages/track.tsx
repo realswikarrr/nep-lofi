@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const Tracks = ({ results, setCurrentVideo, setPlaying }: any) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 p-20 pt-4 overflow-scroll place-items-center h-screen ">
+    <div className="mt-10 grid h-screen grid-cols-1 lg:grid-cols-4 gap-5 p-20 pt-4 overflow-y-scroll overflow-hidden place-items-center ">
       {results &&
         results.map((video: any) => {
           return (
-            <div key={video.id} className="flex flex-col ">
+            <div key={video.id}>
               <Image
                 onClick={() => {
                   setCurrentVideo(video);
@@ -18,7 +18,9 @@ const Tracks = ({ results, setCurrentVideo, setPlaying }: any) => {
                 height={300}
                 className="object-cover cursor-pointer"
               />
-              <p className="text-white truncate w-60 ">{video.snippet.title}</p>
+              <h1 className="text-white truncate w-60 ">
+                {video.snippet.title}
+              </h1>
             </div>
           );
         })}
