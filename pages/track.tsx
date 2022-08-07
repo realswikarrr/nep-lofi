@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Tracks = ({ results, setCurrentVideo, setPlaying }: any) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 p-20 place-items-center h-screen overflow-scroll">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 p-20 pt-4 place-items-center h-screen ">
       {results &&
         results.map((video: any) => {
           return (

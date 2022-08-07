@@ -8,6 +8,9 @@ module.exports = {
       backgroundImage: (theme) => ({
         "my-bg": "url('/images/bg.webp')",
       }),
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
+      },
     },
   },
   plugins: [],

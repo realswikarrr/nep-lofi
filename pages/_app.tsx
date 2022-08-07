@@ -32,6 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         results={results}
         setPlaying={setPlaying}
         setCurrentVideo={setCurrentVideo}
+        currentVideo={currentVideo}
       />
     </Layout>
   );

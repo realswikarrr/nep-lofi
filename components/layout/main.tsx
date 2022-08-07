@@ -29,8 +29,8 @@ const Main = ({ children, id, playing }: Props) => {
       <Player id={id} playing={playing} />
 
       <div className="grid place-items-center h-screen ">
-        <div className="mainbg h-[90%] w-[90%] rounded-xl overflow-hidden shadow-2xl bg-cover bg-center border-2 border-[#674AB3] shadow-5xl">
-          <div className="container mx-auto">
+        <div className="mainbg h-[90%] w-[90%] overflow-auto rounded-xl  shadow-2xl bg-cover bg-center border-2 border-[#674AB3] shadow-5xl">
+          <div className="container mx-auto ">
             <NavBar />
             {children}
           </div>
