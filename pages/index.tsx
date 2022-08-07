@@ -7,7 +7,7 @@ import Player from "../components/player";
 const Home: NextPage = ({ id, playing, setPlaying }: any) => {
   return (
     <div>
-      <button onClick={() => setPlaying(!playing)}>
+      <button className="text-white" onClick={() => setPlaying(!playing)}>
         {playing ? "Pause" : "Play"}{" "}
       </button>
 
