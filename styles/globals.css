@@ -4,9 +4,7 @@
 
 @layer base {
   body {
-    background: url("../public/images/bg.webp") no-repeat center center fixed;
-    height: 100vh;
-    background-size: cover;
+    background-color: black;
   }
 }
 
