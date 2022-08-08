@@ -3,6 +3,8 @@ import Image from "next/image";
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
 import { useState } from "react";
+import PlayingSvg from "../components/playing-svg";
+import LoadingSvg from "../components/loading-svg";
 
 const Home: NextPage = ({
   playing,
@@ -88,14 +90,14 @@ const Home: NextPage = ({
             />
           </div>
 
-          {loading ? (
+          {playing && loading ? (
+            <LoadingSvg text="Loading..." />
+          ) : !playing ? (
             <div className="mt-4 text-center">
-              <p className="text-white">Loading....</p>
+              <p className="text-white">Press Play 🕹️ To Start Playing</p>
             </div>
           ) : (
-            <div>
-              <p className="text-white">Now Playing</p>
-            </div>
+            <PlayingSvg text="Now Playing" />
           )}
         </div>
       </div>
