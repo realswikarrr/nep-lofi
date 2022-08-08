@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
+import { useState } from "react";
 
 const Home: NextPage = ({
   playing,
@@ -9,6 +10,7 @@ const Home: NextPage = ({
   currentVideo,
   results,
   setCurrentVideo,
+  loading,
 }: any) => {
   const nextHandler = () => {
     const index = results.indexOf(currentVideo);
@@ -68,12 +70,16 @@ const Home: NextPage = ({
             {playing ? (
               <AiFillPauseCircle
                 className="h-10 w-10 text-[#674AB3] cursor-pointer"
-                onClick={() => setPlaying(!playing)}
+                onClick={() => {
+                  setPlaying(!playing);
+                }}
               />
             ) : (
               <AiFillPlayCircle
                 className="h-10 w-10 text-[#674AB3] cursor-pointer "
-                onClick={() => setPlaying(!playing)}
+                onClick={() => {
+                  setPlaying(!playing);
+                }}
               />
             )}
             <BiSkipNext
@@ -81,6 +87,16 @@ const Home: NextPage = ({
               className="h-10 w-10 text-[#674AB3] cursor-pointer"
             />
           </div>
+
+          {loading ? (
+            <div className="mt-4 text-center">
+              <p className="text-white">Loading....</p>
+            </div>
+          ) : (
+            <div>
+              <p className="text-white">Now Playing</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

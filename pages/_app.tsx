@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [currentVideo, setCurrentVideo] = useState<any>();
   const [playing, setPlaying] = useState(false);
   const [results, setResults] = useState<any>();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const MY_PLAYLIST = process.env.NEXT_PUBLIC_YOUTUBE_PLAYLIST_ID;
@@ -24,7 +25,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <Layout id={currentVideo?.snippet.resourceId.videoId} playing={playing}>
+    <Layout
+      id={currentVideo?.snippet.resourceId.videoId}
+      playing={playing}
+      loading={loading}
+      setLoading={setLoading}
+    >
       <Component
         {...pageProps}
         id={currentVideo?.snippet.resourceId.videoId}
@@ -33,6 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         setPlaying={setPlaying}
         setCurrentVideo={setCurrentVideo}
         currentVideo={currentVideo}
+        loading={loading}
       />
     </Layout>
   );
