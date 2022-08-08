@@ -8,11 +8,15 @@ export default function Document() {
         <title>Nep Lofi</title>
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icon/maskable.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes"></meta>
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        ></meta>
+        <meta
+          name="viewport"
+          content="initial-scale=1, viewport-fit=cover, width=device-width"
+        ></meta>
         <meta name="description" content="Nep Lofi HomePage" />
         <meta name="author" content="Swikar Adhikari" />
         <meta name="author" content="swikarr_" />
