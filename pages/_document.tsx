@@ -12,6 +12,7 @@ export default function Document() {
         <meta name="description" content="Nep Lofi HomePage" />
         <meta name="author" content="Swikar Adhikari" />
         <meta name="author" content="swikarr_" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <link
           rel="shortcut icon"
           href="/images/favicon.ico"
