@@ -22,7 +22,7 @@ export default function Document() {
         <meta property="og:type" content="website" />
       </Head>
 
-      <body className="bg-my-bg w-full h-screen bg-no-repeat bg-center bg-cover">
+      <body className="bg-my-bg w-full h-screen bg-no-repeat bg-center bg-cover bg-black">
         <Main />
         <NextScript />
       </body>
