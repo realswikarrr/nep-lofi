@@ -7,7 +7,7 @@ export default function Document() {
       <Head>
         <title>Nep Lofi</title>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/icon/maskable.png" />
+        <link rel="apple-touch-icon" href="/icons/maskable.png" />
         <meta name="apple-mobile-web-app-capable" content="yes"></meta>
         <meta
           name="apple-mobile-web-app-status-bar-style"

@@ -3,7 +3,33 @@ import Image from "next/image";
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
 
-const Home: NextPage = ({ playing, setPlaying, currentVideo }: any) => {
+const Home: NextPage = ({
+  playing,
+  setPlaying,
+  currentVideo,
+  results,
+  setCurrentVideo,
+}: any) => {
+  const nextHandler = () => {
+    const index = results.indexOf(currentVideo);
+    const nextVideo = results[index + 1];
+    if (nextVideo) {
+      setPlaying(false);
+      setCurrentVideo(nextVideo);
+      setPlaying(true);
+    }
+  };
+
+  const previousHandler = () => {
+    const index = results.indexOf(currentVideo);
+    const previousVideo = results[index - 1];
+    if (previousVideo) {
+      setPlaying(false);
+      setCurrentVideo(previousVideo);
+      setPlaying(true);
+    }
+  };
+  // console.log(results.length);
   return (
     <div className="container mx-auto max-w-xs">
       <div className="flex items-center flex-col">
@@ -35,19 +61,25 @@ const Home: NextPage = ({ playing, setPlaying, currentVideo }: any) => {
           </h2>
 
           <div className="mt-4 flex items-center justify-center">
-            <BiSkipPrevious className="h-10 w-10 text-[#674AB3]" />
+            <BiSkipPrevious
+              onClick={previousHandler}
+              className="h-10 w-10 text-[#674AB3] cursor-pointer"
+            />
             {playing ? (
               <AiFillPauseCircle
-                className="h-10 w-10 text-[#674AB3] "
+                className="h-10 w-10 text-[#674AB3] cursor-pointer"
                 onClick={() => setPlaying(!playing)}
               />
             ) : (
               <AiFillPlayCircle
-                className="h-10 w-10 text-[#674AB3] "
+                className="h-10 w-10 text-[#674AB3] cursor-pointer "
                 onClick={() => setPlaying(!playing)}
               />
             )}
-            <BiSkipNext className="h-10 w-10 text-[#674AB3]" />
+            <BiSkipNext
+              onClick={nextHandler}
+              className="h-10 w-10 text-[#674AB3] cursor-pointer"
+            />
           </div>
         </div>
       </div>
