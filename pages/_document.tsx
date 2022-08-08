@@ -8,11 +8,15 @@ export default function Document() {
         <title>Nep Lofi</title>
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icon/maskable.png" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Nep Lofi HomePage" />
         <meta name="author" content="Swikar Adhikari" />
         <meta name="author" content="swikarr_" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
         <link
           rel="shortcut icon"
           href="/images/favicon.ico"
@@ -23,7 +27,7 @@ export default function Document() {
         <meta property="og:type" content="website" />
       </Head>
 
-      <body className="bg-my-bg w-full h-screen bg-no-repeat bg-center bg-cover bg-black">
+      <body className="bg-my-bg w-full h-screen bg-no-repeat bg-center bg-cover ">
         <Main />
         <NextScript />
       </body>
