@@ -1,4 +1,5 @@
 const withPwa = require("next-pwa");
+const runtimeCaching = require("next-pwa/cache");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -9,6 +10,8 @@ const nextConfig = {
   },
   pwa: {
     dest: "public",
+    runtimeCaching,
+    buildExcludes: [/middleware-manifest.json$/],
     disable: process.env.NODE_ENV == "development",
   },
 };
