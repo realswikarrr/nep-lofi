@@ -14,7 +14,7 @@ const NavBar = () => {
     <nav className="py-2.5 pb-0 mb-0 rounded bg-white-900 backdrop-blur-sm lg:bg-none md:backdrop-blur-0 lg:backdrop-blur-none">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Link href="/" className="flex items-center ">
-          <span className="flex gap-2 items-center self-center text-xl font-semibold whitespace-nowrap text-white ml-2 lg:ml-0 cursor-pointer">
+          <span className="flex gap-2 items-center self-center text-xl font-semibold whitespace-nowrap text-white ml-2  cursor-pointer">
             <BsFillMusicPlayerFill />
             NepLofi
           </span>

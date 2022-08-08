@@ -13,6 +13,7 @@ export default function Document() {
           href="/images/favicon.ico"
           type="image/x-icon"
         />
+        <link rel="manifest" href="/manifest.json" />
         <meta property="og:site_name" content="Swikar Adhikari" />
         <meta name="og:title" content="Swikar Adhikari" />
         <meta property="og:type" content="website" />
