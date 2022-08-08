@@ -59,8 +59,8 @@ const Home: NextPage = ({
           </div>
         </div>
 
-        <div className="mt-4 text-justify">
-          <h2 className="text-md font-medium  text-white">
+        <div className="mt-4 text-center">
+          <h2 className="text-md font-medium text-center text-white">
             {currentVideo?.snippet.title}
           </h2>
 
