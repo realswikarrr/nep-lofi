@@ -19,7 +19,7 @@ const Tracks = ({ results, setCurrentVideo, setPlaying }: any) => {
                   alt={video?.snippet.title}
                   width={500}
                   height={300}
-                  className="object-cover cursor-pointer"
+                  className="object-cover cursor-pointer hover:opacity-60"
                 />
                 <h1 className="text-white truncate w-60 ">
                   {video.snippet.title}
