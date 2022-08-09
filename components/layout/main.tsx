@@ -25,9 +25,8 @@ const Main = ({ children, id, playing, loading, setLoading }: Props) => {
       <div className="grid place-items-center h-screen">
         <div className="mainbg h-[90%] w-[90%] overflow-hidden rounded-xl shadow-2xl bg-cover bg-center border-2 border-[#674AB3] shadow-5xl">
           <NavBar />
-          <div className="flex items-center justify-center flex-col h-[85%]">
-            {children}
-          </div>
+
+          {children}
         </div>
       </div>
     </>
