@@ -14,10 +14,7 @@ const NavBar = () => {
     <nav className="py-2.5 pb-0 mb-0 rounded bg-white-900 backdrop-blur-sm lg:bg-none md:backdrop-blur-0 lg:backdrop-blur-none">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Link href="/" className="flex items-center ">
-          <span
-            onClick={() => setActive(false)}
-            className="flex gap-2 items-center self-center text-xl font-semibold whitespace-nowrap text-white ml-2  cursor-pointer"
-          >
+          <span className="flex gap-2 items-center self-center text-xl font-semibold whitespace-nowrap text-white ml-2  cursor-pointer">
             <BsFillMusicPlayerFill />
             NepLofi
           </span>
@@ -81,20 +78,14 @@ const NavBar = () => {
             <ul className="flex justify-evenly flex-row p-2  bg-white-900 backdrop-blur-sm ">
               <li>
                 <Link href="/chat" aria-current="page">
-                  <span
-                    onClick={() => setActive(false)}
-                    className="cursor-pointer flex items-center gap-2 hover:text-indigo-700"
-                  >
+                  <span className="cursor-pointer flex items-center gap-2 hover:text-indigo-700">
                     <BsFillChatSquareTextFill /> Chat
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/game">
-                  <span
-                    onClick={() => setActive(false)}
-                    className="cursor-pointer flex items-center gap-2 hover:text-indigo-700"
-                  >
+                  <span className="cursor-pointer flex items-center gap-2 hover:text-indigo-700">
                     <BiGame />
                     Games
                   </span>
@@ -102,10 +93,7 @@ const NavBar = () => {
               </li>
               <li>
                 <Link href="/track">
-                  <span
-                    onClick={() => setActive(false)}
-                    className=" cursor-pointer flex items-center gap-2 hover:text-indigo-700"
-                  >
+                  <span className=" cursor-pointer flex items-center gap-2 hover:text-indigo-700">
                     <BsMusicNoteList />
                     Tracks
                   </span>

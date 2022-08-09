@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Layout from "../components/layout/main";
 import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [currentVideo, setCurrentVideo] = useState<any>();
