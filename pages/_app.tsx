@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Layout from "../components/layout/main";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+import { SessionProvider } from "next-auth/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [currentVideo, setCurrentVideo] = useState<any>();
@@ -26,23 +27,25 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <Layout
-      id={currentVideo?.snippet.resourceId.videoId}
-      playing={playing}
-      loading={loading}
-      setLoading={setLoading}
-    >
-      <Component
-        {...pageProps}
+    <SessionProvider session={pageProps.session}>
+      <Layout
         id={currentVideo?.snippet.resourceId.videoId}
         playing={playing}
-        results={results}
-        setPlaying={setPlaying}
-        setCurrentVideo={setCurrentVideo}
-        currentVideo={currentVideo}
         loading={loading}
-      />
-    </Layout>
+        setLoading={setLoading}
+      >
+        <Component
+          {...pageProps}
+          id={currentVideo?.snippet.resourceId.videoId}
+          playing={playing}
+          results={results}
+          setPlaying={setPlaying}
+          setCurrentVideo={setCurrentVideo}
+          currentVideo={currentVideo}
+          loading={loading}
+        />
+      </Layout>
+    </SessionProvider>
   );
 }
 
