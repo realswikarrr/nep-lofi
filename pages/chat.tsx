@@ -29,7 +29,7 @@ const Chat = () => {
 export default Chat;
 
 export const getServerSideProps = async (ctx: any) => {
-  const session = await getSession(ctx.req);
+  const session = await getSession(ctx);
   return {
     props: {
       session,
