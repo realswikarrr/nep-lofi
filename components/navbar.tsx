@@ -78,24 +78,31 @@ const NavBar = () => {
             <ul className="flex justify-evenly flex-row p-2  bg-white-900 backdrop-blur-sm ">
               <li>
                 <Link href="/chat" aria-current="page">
-                  <span className="cursor-pointer flex items-center gap-2 hover:text-indigo-700">
+                  <span
+                    onClick={() => setActive(false)}
+                    className="cursor-pointer flex items-center gap-2 hover:text-indigo-700"
+                  >
                     <BsFillChatSquareTextFill /> Chat
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/game">
-                  <span className="cursor-pointer flex items-center gap-2 hover:text-indigo-700">
-                    <BiGame />
-                    Games
+                  <span
+                    onClick={() => setActive(false)}
+                    className="cursor-pointer flex items-center gap-2 hover:text-indigo-700"
+                  >
+                    <BiGame /> Games
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/track">
-                  <span className=" cursor-pointer flex items-center gap-2 hover:text-indigo-700">
-                    <BsMusicNoteList />
-                    Tracks
+                  <span
+                    onClick={() => setActive(false)}
+                    className=" cursor-pointer flex items-center gap-2 hover:text-indigo-700"
+                  >
+                    <BsMusicNoteList /> Tracks
                   </span>
                 </Link>
               </li>
