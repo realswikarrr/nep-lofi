@@ -4,7 +4,7 @@ import Layout from "../components/layout/article";
 const Tracks = ({ results, setCurrentVideo, setPlaying }: any) => {
   return (
     <Layout>
-      <div className=" grid scrollbar  scrollbar-thumb-purple-500 scrollbar-track-transparent h-screen grid-cols-1 lg:grid-cols-3 gap-5 p-20 pt-4 overflow-y-scroll overflow-hidden place-items-center ">
+      <div className="grid scrollbar scrollbar-thumb-purple-500 scrollbar-track-transparent h-screen grid-cols-1 lg:grid-cols-4 gap-3 p-44 pb-0  pt-0 mt-5 overflow-y-scroll place-items-center overflow-x-hidden">
         {results &&
           results.map((video: any) => {
             return (
@@ -18,9 +18,9 @@ const Tracks = ({ results, setCurrentVideo, setPlaying }: any) => {
                   alt={video?.snippet.title}
                   width={500}
                   height={300}
-                  className="object-cover cursor-pointer hover:opacity-60"
+                  className="object-cover cursor-pointer"
                 />
-                <h1 className="text-white truncate w-60 ">
+                <h1 className="text-white truncate w-60 overflow-hidden ">
                   {video.snippet.title}
                 </h1>
               </div>
