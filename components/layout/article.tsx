@@ -13,7 +13,7 @@ const Layout = ({ children }: any) => {
       animate="enter"
       exit="exit"
       variants={variants}
-      transition={{ duration: 0.4, type: "easeInOut" }}
+      transition={{ duration: 0.7, type: "easeInOut" }}
       className="flex items-center justify-center flex-col h-[85%]"
     >
       <>{children}</>
