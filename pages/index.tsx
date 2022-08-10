@@ -34,7 +34,6 @@ const Home: NextPage = ({
       setPlaying(true);
     }
   };
-  // console.log(results.length);
   return (
     <Layout>
       <div className="container mx-auto max-w-xs">
