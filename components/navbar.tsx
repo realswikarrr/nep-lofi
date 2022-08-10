@@ -75,33 +75,24 @@ const NavBar = () => {
 
         {active ? (
           <div className="w-full text-white" id="navbar-default">
-            <ul className="flex justify-evenly flex-row p-2  bg-white-900 backdrop-blur-sm ">
+            <ul className="flex justify-evenly flex-row mt-2 bg-white-900 backdrop-blur-sm ">
               <li>
                 <Link href="/chat" aria-current="page">
-                  <span
-                    onClick={() => setActive(false)}
-                    className="cursor-pointer flex items-center gap-2 hover:text-indigo-700"
-                  >
+                  <span className="cursor-pointer flex items-center gap-2 hover:text-indigo-700">
                     <BsFillChatSquareTextFill /> Chat
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/game">
-                  <span
-                    onClick={() => setActive(false)}
-                    className="cursor-pointer flex items-center gap-2 hover:text-indigo-700"
-                  >
+                  <span className="cursor-pointer flex items-center gap-2 hover:text-indigo-700">
                     <BiGame /> Games
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/track">
-                  <span
-                    onClick={() => setActive(false)}
-                    className=" cursor-pointer flex items-center gap-2 hover:text-indigo-700"
-                  >
+                  <span className=" cursor-pointer flex items-center gap-2 hover:text-indigo-700">
                     <BsMusicNoteList /> Tracks
                   </span>
                 </Link>
