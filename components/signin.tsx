@@ -13,15 +13,25 @@ const SignInLayout = () => {
     await signOut();
   };
 
-  return (
-    <div>
-      <button
-        onClick={status === "authenticated" ? handleSignOut : handleSignIn}
-        className="flex items-center border-2 border-[#674AB3] px-8 py-3 text-sm font-medium text-white transition rounded hover:scale-110 hover:shadow-xl active:bg-[#674AB3] focus:outline-none "
-      >
-        {status === "authenticated" ? <>Sign Out</> : <>Sign In To Chat</>}
-
-        {status === "authenticated" ? null : (
+  if (session) {
+    return (
+      <div>
+        <button
+          onClick={handleSignOut}
+          className="flex items-center border-2 border-[#674AB3] px-8 py-3 text-sm font-medium text-white transition rounded hover:scale-110 hover:shadow-xl active:bg-[#674AB3] focus:outline-none "
+        >
+          Sign Out
+        </button>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <button
+          onClick={handleSignIn}
+          className="flex items-center border-2 border-[#674AB3] px-8 py-3 text-sm font-medium text-white transition rounded hover:scale-110 hover:shadow-xl active:bg-[#674AB3] focus:outline-none "
+        >
+          Sign In To Join The Chat
           <span aria-hidden="true" className="ml-1.5" role="img">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -49,10 +59,10 @@ const SignInLayout = () => {
               ></path>
             </svg>
           </span>
-        )}
-      </button>
-    </div>
-  );
+        </button>
+      </div>
+    );
+  }
 };
 
 export default SignInLayout;
