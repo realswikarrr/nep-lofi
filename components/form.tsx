@@ -8,7 +8,7 @@ const FormLayout = () => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    await supabase.from("messages").insert({
+    await supabase.from("chats").insert({
       content: message,
       name: session.user.name,
       created_at: new Date().toISOString(),

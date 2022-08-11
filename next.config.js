@@ -8,6 +8,6 @@ module.exports = withPWA({
     skipWaiting: true,
   },
   images: {
-    domains: ["i.ytimg.com"],
+    domains: ["i.ytimg.com", "lh3.googleusercontent.com"],
   },
 });
