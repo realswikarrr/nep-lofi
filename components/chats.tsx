@@ -3,10 +3,20 @@ import { useEffect, useState } from "react";
 import { supabase } from "../utils/supabaseClient";
 import Layout from "./layout/article";
 import LoadingSvg from "./loading-svg";
+import { useRef } from "react";
 
 const Chats = () => {
+  const messagesEndRef = useRef<null | HTMLDivElement>(null);
   const [chats, setChats] = useState<any>([]);
   const [loading, setLoading] = useState<boolean>(true);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [chats]);
 
   useEffect(() => {
     const getChats = async () => {
@@ -62,6 +72,7 @@ const Chats = () => {
                 </div>
               </div>
             ))}
+            <div ref={messagesEndRef} />
           </div>
         </Layout>
       )}
