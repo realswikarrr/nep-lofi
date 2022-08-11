@@ -4,7 +4,7 @@ import Layout from "../components/layout/article";
 const Tracks = ({ results, setCurrentVideo, setPlaying }: any) => {
   return (
     <Layout delay="0.7">
-      <div className="grid scrollbar scrollbar-thumb-purple-500 scrollbar-track-transparent h-screen grid-cols-1 lg:grid-cols-4 gap-3 p-44 pb-0  pt-0 mt-5 overflow-y-scroll place-items-center overflow-x-hidden">
+      <div className="grid scrollbar  h-screen grid-cols-1 lg:grid-cols-4 gap-3 p-44 pb-0  pt-0 mt-5 overflow-y-scroll place-items-center overflow-x-hidden">
         {results &&
           results.map((video: any) => {
             return (
