@@ -13,7 +13,7 @@ const SignInLayout = () => {
     await signOut();
   };
 
-  if (session) {
+  if (status == "authenticated") {
     return (
       <div>
         <button
@@ -24,6 +24,8 @@ const SignInLayout = () => {
         </button>
       </div>
     );
+  } else if (status == "loading") {
+    return null;
   } else {
     return (
       <div>
