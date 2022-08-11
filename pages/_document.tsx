@@ -17,7 +17,7 @@ export default function Document() {
           name="viewport"
           content="initial-scale=1, viewport-fit=cover, width=device-width"
         ></meta>
-        <meta name="description" content="Nep Lofi HomePage" />
+        <meta name="description" content="Nep Lofi" />
         <meta name="author" content="Swikar Adhikari" />
         <meta name="author" content="swikarr_" />
 
