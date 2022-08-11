@@ -6,14 +6,14 @@ const variants = {
   exit: { opacity: 0, x: -0, y: 20 },
 };
 
-const Layout = ({ children }: any) => {
+const Layout = ({ children, delay }: any) => {
   return (
     <motion.article
       initial="hidden"
       animate="enter"
       exit="exit"
       variants={variants}
-      transition={{ duration: 0.7, type: "easeInOut" }}
+      transition={{ duration: delay, type: "easeInOut" }}
       className="flex items-center justify-center flex-col h-[85%]"
     >
       <>{children}</>

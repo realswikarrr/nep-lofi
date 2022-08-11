@@ -6,7 +6,7 @@ import FormLayout from "../components/form";
 
 const Chat = () => {
   return (
-    <Layout>
+    <Layout delay="0.7">
       <div className="flex container mx-auto flex-col flex-grow w-full max-w-xl shadow-xl rounded-lg overflow-hidden">
         <Chats />
         <FormLayout />

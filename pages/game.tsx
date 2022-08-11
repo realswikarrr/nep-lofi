@@ -2,7 +2,7 @@ import Layout from "../components/layout/article";
 
 const Game = () => {
   return (
-    <Layout>
+    <Layout delay="0.7">
       <div>
         <h1 className="text-white">Coming Soon...</h1>
       </div>

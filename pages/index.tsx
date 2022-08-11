@@ -35,7 +35,7 @@ const Home: NextPage = ({
     }
   };
   return (
-    <Layout>
+    <Layout delay="0.7">
       <div className="container mx-auto max-w-xs">
         <div className="flex items-center flex-col">
           <div>
