@@ -11,7 +11,7 @@ const FormLayout = () => {
     await supabase.from("chats").insert({
       content: message,
       name: session.user.name,
-      created_at: new Date().toISOString(),
+      created_at: new Date(),
       image_url: session.user.image,
     });
     setMessage("");
