@@ -28,7 +28,7 @@ const Chats = () => {
   }, []);
 
   return (
-    <Layout delay="1.3">
+    <Layout delay="0.7">
       <div className="flex flex-col flex-grow p-4 scrollbar scrollbar-thumb-purple-500 scrollbar-track-transparent overflow-y-scroll h-auto max-w-xl mx-auto w-full mb-2 mt-2">
         {chats?.map((chat: any) => (
           <div
