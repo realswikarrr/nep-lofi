@@ -4,7 +4,7 @@ import {
   BsMusicNoteList,
   BsFillMusicPlayerFill,
 } from "react-icons/bs";
-import { BiGame } from "react-icons/bi";
+import { BiTimer } from "react-icons/bi";
 
 const NavBar = () => {
   return (
@@ -32,8 +32,8 @@ const NavBar = () => {
             <li>
               <Link href="/game">
                 <span className="text-lg cursor-pointer flex items-center gap-2">
-                  <BiGame />
-                  Games
+                  <BiTimer />
+                  Timer
                 </span>
               </Link>
             </li>
@@ -64,7 +64,7 @@ const NavBar = () => {
             <li>
               <Link href="/game">
                 <span className="cursor-pointer flex items-center gap-2 hover:text-indigo-700">
-                  <BiGame /> Games
+                  <BiTimer /> Games
                 </span>
               </Link>
             </li>
