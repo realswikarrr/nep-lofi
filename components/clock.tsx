@@ -1,4 +1,11 @@
-const Clock = ({ stage, switchStage, getTickingTime, seconds }: any) => {
+const Clock = ({
+  stage,
+  switchStage,
+  getTickingTime,
+  seconds,
+  ticking,
+  setTicking,
+}: any) => {
   const options = ["Timer", "Short Break", "Long Break"];
   return (
     <div className="text-white mx-auto flex flex-col gap-3 h-auto  justify-center">
@@ -23,8 +30,11 @@ const Clock = ({ stage, switchStage, getTickingTime, seconds }: any) => {
         </h1>
       </div>
 
-      <button className="px-16 py-2 text-2xl rounded-md bg-[#674AB3] text-white uppercase font-bold">
-        Start
+      <button
+        onClick={() => setTicking((ticking: any) => !ticking)}
+        className="px-16 py-2 text-2xl rounded-md bg-[#674AB3] text-white uppercase font-bold"
+      >
+        {ticking ? "Pause" : "Start"}
       </button>
     </div>
   );
