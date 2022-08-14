@@ -3,7 +3,7 @@ import React from "react";
 const Alarm = React.forwardRef((_, ref: any) => {
   return (
     <audio ref={ref}>
-      <source src="/alarm.mp3" type="audio/mp3" />
+      <source src="/alarm.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
   );
