@@ -9,7 +9,8 @@
 }
 
 a,
-button {
+button,
+svg {
   @apply cursor-pointer;
 }
 
