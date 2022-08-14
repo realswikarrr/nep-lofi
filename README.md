@@ -1,4 +1,4 @@
-## Nep Lofi WebApp Where Everyone Can Chill And Study
+## Nep Lofi WebApp Where Everyone Can Chill And Study With PWA Support
 
 # Music Player
 ![image](https://user-images.githubusercontent.com/80502023/184535210-16a77b2e-08dc-4878-91a0-b419550347a1.png)
@@ -16,6 +16,7 @@
 # What is this app all about ?
 
 This is a WebApp where you can listen to lofi , chat with your friends and also have pomodoro timer within your study hour this web app have all the features.
+You can also easily install this app in any device you want just name it ios ? done , android ? done 
 
 # Why did i build this ?
 
