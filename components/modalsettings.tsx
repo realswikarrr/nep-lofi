@@ -1,4 +1,5 @@
 import { FiX } from "react-icons/fi";
+import Layout from "./layout/article";
 
 const ModalSettings = ({
   timerRef,
@@ -33,9 +34,8 @@ const ModalSettings = ({
           openSettings ? "" : "hidden"
         }`}
         onClick={() => setOpenSettings(false)}
-      >
-        {" "}
-      </div>
+      ></div>
+
       <div
         className={`max-w-xl bg-white absolute sm:w-96 w-11/12 left-1/2 top-1/2 p-5 rounded-md ${
           openSettings ? "" : "hidden"

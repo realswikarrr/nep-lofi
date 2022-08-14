@@ -30,6 +30,7 @@ const Clock = ({
           );
         })}
       </div>
+
       <div className="mt-10 mb-10">
         <h1 className="text-8xl font-bold selecte-none m-0">
           {getTickingTime()}:{seconds.toString().padStart(2, "0")}
@@ -50,20 +51,22 @@ const Clock = ({
           />
         )}
       </div>
-      {ticking && (
-        <button
-          className="uppercase text-white underline mt-2"
-          onClick={resetTimer}
-        >
-          Reset
-        </button>
-      )}
-      <div>
+
+      <div className="flex items-center gap-3">
+        {ticking && (
+          <button
+            className="uppercase text-white underline mt-2"
+            onClick={resetTimer}
+          >
+            Reset
+          </button>
+        )}
+
         <h1
-          className="cursor-pointer"
+          className="uppercase text-white underline mt-2 cursor-pointer"
           onClick={() => setOpenSettings((value: any) => !value)}
         >
-          Open Setting
+          Change Times
         </h1>
       </div>
     </div>
