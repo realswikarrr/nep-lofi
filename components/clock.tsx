@@ -8,7 +8,7 @@ const Clock = ({
 }: any) => {
   const options = ["Timer", "Short Break", "Long Break"];
   return (
-    <div className="text-white mx-auto flex flex-col gap-3 h-auto  justify-center">
+    <div className="text-white mx-auto flex flex-col gap-3 h-auto items-center  justify-center">
       <div className="flex gap-5 items-center">
         {options.map((option, index) => {
           return (

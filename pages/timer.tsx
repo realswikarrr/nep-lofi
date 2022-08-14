@@ -39,12 +39,19 @@ const Timer = () => {
     return updateStage[stage];
   };
 
+  const resetTimer = () => {
+    setTicking(false);
+    setTimer(40);
+    setShortBreak(10);
+    setLongBreak(30);
+  };
+
   const clockTicking = () => {
     const minutes = getTickingTime();
     const setMinutes = updateMinute();
 
     if (minutes === 0 && seconds === 0) {
-      alert("Time's up!");
+      resetTimer();
     } else if (seconds === 0) {
       setMinutes((minute: any) => minute - 1);
       setSeconds(59);
@@ -68,15 +75,17 @@ const Timer = () => {
 
   return (
     <Layout delay="0.7">
-      <Clock
-        stage={stage}
-        switchStage={switchStage}
-        getTickingTime={getTickingTime}
-        seconds={seconds}
-        ticking={ticking}
-        setTicking={setTicking}
-      />
-      <AboutClock />
+      <div className=" overflow-y-auto scrollbar-hide">
+        <Clock
+          stage={stage}
+          switchStage={switchStage}
+          getTickingTime={getTickingTime}
+          seconds={seconds}
+          ticking={ticking}
+          setTicking={setTicking}
+        />
+        <AboutClock />
+      </div>
     </Layout>
   );
 };
