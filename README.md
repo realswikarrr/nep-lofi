@@ -6,7 +6,7 @@
 # Public Chat Room
 ![image](https://user-images.githubusercontent.com/80502023/184535235-73906082-bc07-49e9-9499-531f92be4cdf.png)
 
-# Pomodor Timer
+# Pomodoro Timer
 ![image](https://user-images.githubusercontent.com/80502023/184535248-51cef95c-6211-4114-bae7-e35286ebd603.png)
 
 # Different Music Tracks To Choose From
