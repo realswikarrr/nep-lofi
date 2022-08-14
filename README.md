@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Nep Lofi WebApp Where Everyone Can Chill And Study
 
-## Getting Started
+# Music Player
+![image](https://user-images.githubusercontent.com/80502023/184535210-16a77b2e-08dc-4878-91a0-b419550347a1.png)
 
-First, run the development server:
+# Public Chat Room
+![image](https://user-images.githubusercontent.com/80502023/184535235-73906082-bc07-49e9-9499-531f92be4cdf.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+# Pomodor Timer
+![image](https://user-images.githubusercontent.com/80502023/184535248-51cef95c-6211-4114-bae7-e35286ebd603.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Different Music Tracks To Choose From
+![image](https://user-images.githubusercontent.com/80502023/184535261-a3e9e541-d7bd-4578-84f6-fc77e83b29ea.png)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# What is this app all about ?
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+This is a WebApp where you can listen to lofi , chat with your friends and also have pomodoro timer within your study hour this web app have all the features.
 
-## Learn More
+# Why did i build this ?
 
-To learn more about Next.js, take a look at the following resources:
+I ones searched for pomodoro apps around internet but didn't got any good ones so i decided to create one as i am always working using pomodoro technique and i though what else could be added to this webapp ? That's where i found a website made from a talented developer you can check it out here - https://loficlub.vercel.app/ . My website is highly inspired from this website this talented developer have all the features in his and i wanted to make a version for myself.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Tech Stack Used ?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`` Next JS ``
+`` Supabase ``
+`` Tailwind CSS ``
+`` TypeScript ``
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Please star this repo if you end up using this project ⭐
