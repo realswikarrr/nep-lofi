@@ -74,6 +74,10 @@ const Timer = () => {
   };
 
   useEffect(() => {
+    window.onbeforeunload = () => {
+      return consumedSecond ? "Show warning" : null;
+    };
+
     const timer = setInterval(() => {
       if (ticking) {
         setConsumedSecond((value) => value + 1);
