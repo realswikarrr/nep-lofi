@@ -10,6 +10,7 @@ const Clock = ({
   isTimeUp,
   muteAlarm,
   resetTimer,
+  setOpenSettings,
 }: any) => {
   const options = ["Timer", "Short Break", "Long Break"];
   return (
@@ -57,6 +58,14 @@ const Clock = ({
           Reset
         </button>
       )}
+      <div>
+        <h1
+          className="cursor-pointer"
+          onClick={() => setOpenSettings((value: any) => !value)}
+        >
+          Open Setting
+        </h1>
+      </div>
     </div>
   );
 };

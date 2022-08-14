@@ -3,6 +3,7 @@ import Clock from "../components/clock";
 import Layout from "../components/layout/article";
 import { useEffect, useRef, useState } from "react";
 import Alarm from "../components/alarm";
+import ModalSettings from "../components/modalsettings";
 
 const Timer = () => {
   const [timer, setTimer] = useState(40);
@@ -13,7 +14,19 @@ const Timer = () => {
   const [consumedSecond, setConsumedSecond] = useState(0);
   const [isTimeUp, setIsTimeUp] = useState(false);
 
+  const [openSettings, setOpenSettings] = useState(false);
+
   const alarmRef = useRef<any>();
+  const timerRef = useRef<any>();
+  const shortBreakRef = useRef<any>();
+  const longBreakRef = useRef<any>();
+
+  const updateTimeDefaultValue = () => {
+    setTimer(timerRef.current.value);
+    setShortBreak(shortBreakRef.current.value);
+    setLongBreak(longBreakRef.current.value);
+    setOpenSettings(false);
+  };
 
   //  Setting the stage of the timer such as navigation
   const [stage, setStage] = useState<any>(0);
@@ -125,9 +138,18 @@ const Timer = () => {
           muteAlarm={muteAlarm}
           isTimeUp={isTimeUp}
           resetTimer={resetTimer}
+          setOpenSettings={setOpenSettings}
         />
         <AboutClock />
         <Alarm ref={alarmRef} />
+        <ModalSettings
+          openSettings={openSettings}
+          setOpenSettings={setOpenSettings}
+          timerRef={timerRef}
+          shortBreakRef={shortBreakRef}
+          longBreakRef={longBreakRef}
+          updateTimeDefaultValue={updateTimeDefaultValue}
+        />
       </div>
     </Layout>
   );
