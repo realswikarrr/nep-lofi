@@ -16,7 +16,7 @@ const Chats = ({ chats }: any) => {
 
   return (
     <Layout delay="0.7">
-      <div className="flex flex-col flex-grow p-4  overflow-y-scroll h-screen max-w-xl mx-auto w-full mb-2 mt-2">
+      <div className="flex flex-col flex-grow p-4 scrollbar-hide  overflow-y-scroll h-screen max-w-xl mx-auto w-full mb-2 mt-2">
         {chats?.map((chat: any) => (
           <div
             key={chat.id}
