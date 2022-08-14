@@ -9,13 +9,24 @@ const Timer = () => {
   const [longBreak, setLongBreak] = useState(30);
   const [seconds, setSeconds] = useState(0);
   const [ticking, setTicking] = useState(false);
+  const [consumedSecond, setConsumedSecond] = useState(0);
 
   //  Setting the stage of the timer such as navigation
   const [stage, setStage] = useState<any>(0);
 
   //  Function to switch the stage of the timer
   const switchStage = (index: any) => {
-    setStage(index);
+    const isYes =
+      consumedSecond && stage !== index
+        ? confirm("Are you sure you want to switch ?")
+        : false;
+
+    if (isYes) {
+      resetTimer();
+      setStage(index);
+    } else if (!consumedSecond) {
+      setStage(index);
+    }
   };
 
   //  Function to get the time of specfic timer stage
@@ -40,7 +51,9 @@ const Timer = () => {
   };
 
   const resetTimer = () => {
+    setConsumedSecond(0);
     setTicking(false);
+    setSeconds(0);
     setTimer(40);
     setShortBreak(10);
     setLongBreak(30);
@@ -63,6 +76,7 @@ const Timer = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       if (ticking) {
+        setConsumedSecond((value) => value + 1);
         clockTicking();
       }
     }, 1000);
