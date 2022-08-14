@@ -2,8 +2,9 @@ import AboutClock from "../components/aboutclock";
 import Clock from "../components/clock";
 import Layout from "../components/layout/article";
 import { useEffect, useRef, useState } from "react";
-import Alarm from "../components/alarm";
+
 import ModalSettings from "../components/modalsettings";
+import useSound from "use-sound";
 
 const Timer = () => {
   const [timer, setTimer] = useState(40);
@@ -13,6 +14,8 @@ const Timer = () => {
   const [ticking, setTicking] = useState(false);
   const [consumedSecond, setConsumedSecond] = useState(0);
   const [isTimeUp, setIsTimeUp] = useState(false);
+
+  const [playAlarm, { stop }] = useSound("/alarm.mp3", { volume: 1 });
 
   const [openSettings, setOpenSettings] = useState(false);
 
@@ -79,7 +82,7 @@ const Timer = () => {
   const timeUp = () => {
     resetTimer();
     setIsTimeUp(true);
-    alarmRef.current.play();
+    playAlarm();
   };
 
   const clockTicking = () => {
@@ -97,8 +100,7 @@ const Timer = () => {
   };
 
   const muteAlarm = () => {
-    alarmRef.current.pause();
-    alarmRef.current.currentTime = 0;
+    stop();
   };
 
   const startTimer = () => {
@@ -141,7 +143,7 @@ const Timer = () => {
           setOpenSettings={setOpenSettings}
         />
         <AboutClock />
-        <Alarm ref={alarmRef} />
+
         <ModalSettings
           openSettings={openSettings}
           setOpenSettings={setOpenSettings}
