@@ -26,6 +26,8 @@ const Timer = () => {
     setShortBreak(shortBreakRef.current.value);
     setLongBreak(longBreakRef.current.value);
     setOpenSettings(false);
+    setSeconds(0);
+    setConsumedSecond(0);
   };
 
   //  Setting the stage of the timer such as navigation
@@ -71,9 +73,7 @@ const Timer = () => {
     setConsumedSecond(0);
     setTicking(false);
     setSeconds(0);
-    setTimer(40);
-    setShortBreak(10);
-    setLongBreak(30);
+    updateTimeDefaultValue();
   };
 
   const timeUp = () => {
