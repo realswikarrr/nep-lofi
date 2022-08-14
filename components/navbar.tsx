@@ -32,7 +32,7 @@ const NavBar = () => {
             <li>
               <Link href="/game">
                 <span className="text-lg cursor-pointer flex items-center gap-2">
-                  <BiTimer />
+                  <BiTimer className="text-2xl" />
                   Timer
                 </span>
               </Link>
@@ -64,7 +64,7 @@ const NavBar = () => {
             <li>
               <Link href="/game">
                 <span className="cursor-pointer flex items-center gap-2 hover:text-indigo-700">
-                  <BiTimer /> Games
+                  <BiTimer className="text-2xl" /> Timer
                 </span>
               </Link>
             </li>
