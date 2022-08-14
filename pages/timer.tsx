@@ -1,7 +1,8 @@
 import AboutClock from "../components/aboutclock";
 import Clock from "../components/clock";
 import Layout from "../components/layout/article";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Alarm from "../components/alarm";
 
 const Timer = () => {
   const [timer, setTimer] = useState(40);
@@ -10,6 +11,9 @@ const Timer = () => {
   const [seconds, setSeconds] = useState(0);
   const [ticking, setTicking] = useState(false);
   const [consumedSecond, setConsumedSecond] = useState(0);
+  const [isTimeUp, setIsTimeUp] = useState(false);
+
+  const alarmRef = useRef<any>();
 
   //  Setting the stage of the timer such as navigation
   const [stage, setStage] = useState<any>(0);
@@ -59,18 +63,35 @@ const Timer = () => {
     setLongBreak(30);
   };
 
+  const timeUp = () => {
+    resetTimer();
+    setIsTimeUp(true);
+    alarmRef.current.play();
+  };
+
   const clockTicking = () => {
     const minutes = getTickingTime();
     const setMinutes = updateMinute();
 
     if (minutes === 0 && seconds === 0) {
-      resetTimer();
+      timeUp();
     } else if (seconds === 0) {
       setMinutes((minute: any) => minute - 1);
       setSeconds(59);
     } else {
       setSeconds((seconds) => seconds - 1);
     }
+  };
+
+  const muteAlarm = () => {
+    alarmRef.current.pause();
+    alarmRef.current.currentTime = 0;
+  };
+
+  const startTimer = () => {
+    setIsTimeUp(false);
+    muteAlarm();
+    setTicking((ticking: any) => !ticking);
   };
 
   useEffect(() => {
@@ -100,9 +121,12 @@ const Timer = () => {
           getTickingTime={getTickingTime}
           seconds={seconds}
           ticking={ticking}
-          setTicking={setTicking}
+          startTimer={startTimer}
+          muteAlarm={muteAlarm}
+          isTimeUp={isTimeUp}
         />
         <AboutClock />
+        <Alarm ref={alarmRef} />
       </div>
     </Layout>
   );

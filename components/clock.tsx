@@ -1,10 +1,14 @@
+import { BsVolumeMuteFill } from "react-icons/bs";
+
 const Clock = ({
   stage,
   switchStage,
   getTickingTime,
   seconds,
   ticking,
-  setTicking,
+  startTimer,
+  isTimeUp,
+  muteAlarm,
 }: any) => {
   const options = ["Timer", "Short Break", "Long Break"];
   return (
@@ -30,12 +34,20 @@ const Clock = ({
         </h1>
       </div>
 
-      <button
-        onClick={() => setTicking((ticking: any) => !ticking)}
-        className="px-16 py-2 text-2xl rounded-md bg-[#674AB3] text-white uppercase font-bold"
-      >
-        {ticking ? "Pause" : "Start"}
-      </button>
+      <div className="flex gap-2 items-center">
+        <button
+          onClick={startTimer}
+          className="px-16 py-2 text-2xl rounded-md bg-[#674AB3] text-white uppercase font-bold"
+        >
+          {ticking ? "Pause" : "Start"}
+        </button>
+        {isTimeUp && (
+          <BsVolumeMuteFill
+            className="text-3xl text-white cursor-pointer"
+            onClick={muteAlarm}
+          />
+        )}
+      </div>
     </div>
   );
 };
