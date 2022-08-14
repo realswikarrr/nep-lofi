@@ -68,7 +68,7 @@ const ModalSettings = ({
           })}
         </div>
         <button
-          className="bg-green-500 uppercase w-full mt-5 text-white rounded py-2"
+          className="bg-[#674AB3] uppercase w-full mt-5 text-white rounded py-2"
           onClick={updateTimeDefaultValue}
         >
           Save
