@@ -1,4 +1,4 @@
-const Clock = ({ stage, switchStage, getTickingTime }: any) => {
+const Clock = ({ stage, switchStage, getTickingTime, seconds }: any) => {
   const options = ["Timer", "Short Break", "Long Break"];
   return (
     <div className="text-white mx-auto flex flex-col gap-3 h-auto  justify-center">
@@ -19,7 +19,7 @@ const Clock = ({ stage, switchStage, getTickingTime }: any) => {
       </div>
       <div className="mt-10 mb-10">
         <h1 className="text-8xl font-bold selecte-none m-0">
-          {getTickingTime()}:00
+          {getTickingTime()}:{seconds.toString().padStart(2, "0")}
         </h1>
       </div>
 
