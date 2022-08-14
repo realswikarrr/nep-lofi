@@ -9,6 +9,7 @@ const Clock = ({
   startTimer,
   isTimeUp,
   muteAlarm,
+  resetTimer,
 }: any) => {
   const options = ["Timer", "Short Break", "Long Break"];
   return (
@@ -48,6 +49,14 @@ const Clock = ({
           />
         )}
       </div>
+      {ticking && (
+        <button
+          className="uppercase text-white underline mt-2"
+          onClick={resetTimer}
+        >
+          Reset
+        </button>
+      )}
     </div>
   );
 };

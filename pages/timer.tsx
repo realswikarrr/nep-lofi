@@ -124,6 +124,7 @@ const Timer = () => {
           startTimer={startTimer}
           muteAlarm={muteAlarm}
           isTimeUp={isTimeUp}
+          resetTimer={resetTimer}
         />
         <AboutClock />
         <Alarm ref={alarmRef} />
