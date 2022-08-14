@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*:before,
+*:after {
+  @apply cursor-default;
+}
+
+a,
+button {
+  @apply cursor-pointer;
+}
+
 @layer base {
   body {
     background-color: black;

@@ -11,6 +11,10 @@ module.exports = {
       animation: {
         "spin-slow": "spin 10s linear infinite",
       },
+      cursor: {
+        default: "url('/images/cursor.png'), default",
+        pointer: "url('/images/cursorpointer.png'), pointer",
+      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],
