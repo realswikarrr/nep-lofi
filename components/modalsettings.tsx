@@ -37,7 +37,7 @@ const ModalSettings = ({
       ></div>
 
       <div
-        className={`max-w-xl bg-white absolute sm:w-96 w-11/12 left-1/2 top-1/2 p-5 rounded-md ${
+        className={`max-w-xl bg-gradient-to-l from-[#000] to-[#11111198] backdrop-blur-md border border-[#674AB3] -ml-0.5 absolute sm:w-96 w-11/12 left-1/2 top-1/2 p-5 rounded-md ${
           openSettings ? "" : "hidden"
         }`}
         style={{
