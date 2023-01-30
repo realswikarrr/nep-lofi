@@ -14,14 +14,14 @@ const Tracks = ({ results, setCurrentVideo, setPlaying }: any) => {
                     setCurrentVideo(video);
                     setPlaying(true);
                   }}
-                  src={video?.snippet.thumbnails.standard.url}
-                  alt={video?.snippet.title}
+                  src={video?.snippet?.thumbnails?.standard?.url}
+                  alt={video?.snippet?.title}
                   width={500}
                   height={300}
                   className="object-cover cursor-pointer"
                 />
                 <h1 className="text-white truncate w-60 overflow-hidden ">
-                  {video.snippet.title}
+                  {video?.snippet?.title}
                 </h1>
               </div>
             );

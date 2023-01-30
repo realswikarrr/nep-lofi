@@ -100,6 +100,8 @@ const Home: NextPage = ({
             ) : (
               <PlayingSvg text="Now Playing" />
             )}
+
+            <h1 className="text-white mt-10 opacity-10">© Swikar Adhikari</h1>
           </div>
         </div>
       </div>
